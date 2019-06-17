@@ -1,0 +1,323 @@
+@font-face {
+    font-family: Suranna;
+    src: url("../fonts/ProductSans.ttf") format("truetype");
+}
+
+/*** NAVBAR ***/
+@media screen and (max-width: 500px) {
+    html, body {
+        overflow-x: hidden;
+        position: relative;
+        padding-bottom: 0vh;
+    }
+    
+    .navlinks {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        right: 0;
+        height: 75vh;
+        top: 12vh;
+        background-color: white;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+        z-index: 1;
+    }
+    
+    .navlinks li {
+        opacity: 1;
+    }
+    
+    .navlinks a {
+        font-size: 2.2vh;
+    }
+    
+    .bars {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+/*@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}*/
+
+.toggle .l1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .l2 {
+    opacity: 0;
+}
+
+.toggle .l3 {
+    transform: rotate(45deg)  translate(-5px, -6px);
+}
+
+/*** SOCIAL AND COPYRIGHT ***/
+@media screen and (max-width: 500px) {
+    footer a, span, p  {
+        font-size: 2.8vw;
+    }
+}
+
+/*** INTRO ***/
+@media screen and (max-width: 500px) {
+   .intro h1 {
+        font-size: 10vw;
+    }
+    
+    .intro p {
+        font-size: 5vw;
+    }
+    
+    span.back-in-intro::before {
+        top: 83%;
+        left: 2%;
+        font-size: 20vw;
+        letter-spacing: 5vw;
+    }
+    
+    .regbtn {
+        margin-top: 20vh;
+        width: 50vw;
+        height: 7vh;
+        font-size: 3vw;
+        border-radius: 8vw;
+    }
+}
+
+/*** FEATURES ***/
+@media screen and (max-width: 500px) {    
+    .intr-ftr span {
+        font-size: 10vw;
+    }
+
+    .intr-ftr p {
+        font-size: 5vw;
+        margin: 0;
+    }
+}
+
+/*** PRICING ***/
+@media screen and (max-width: 500px) {    
+    .pricing-not-live {
+        font-size: 10vw;
+    }
+    
+    .p-pricing-not-live {
+        font-size: 5vw;
+    }
+}
+
+/*** REGLOG ***/
+@media screen and (max-width: 500px) {
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    .title-reglog {
+        top: 5vh;
+        text-align: center;
+    }
+    
+    .title-reglog span {
+        font-size: 7vw;
+    }
+    
+    .reglog-form {
+        width: 90vw;
+        background-color: white; 
+    }
+    
+    .reglog input[type=text], input[type=password] {
+        background: white;
+        width: 75vw;
+        font-size: 4.5vw;
+        font-weight: lighter;
+        border-bottom: 3px solid #444444;
+        padding: 2vw;
+    }
+    
+     .reglog input[type=text]:hover, input[type=password]:hover {
+        border-bottom: 3px solid #222222;
+    }
+    
+    .reglog input[type=text]::placeholder, input[type=password]::placeholder {
+        color: #c1c1c1;
+    }
+    
+    .reglog input[type=submit] {
+        width: 75vw;
+        height: 7vh;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 4vw;
+        font-family: 'ProductSans', sans-serif;
+        border-radius: 8vw;
+    }
+    
+    .red-login {
+        font-size: 4vw;
+        margin-bottom: 0px;
+    }
+    
+    .sep {
+        height: 0.2vh;
+        width: 75vw;
+        background-color: #c1c1c1;
+    }
+
+    .social-login-cont {
+        height: 10vh;
+        width: 80vw;
+    }
+
+    .login-insta {
+        height: 6vh;
+        width: 75vw;
+        font-size: 4vw;
+        line-height: 6vh;
+    }
+    
+    .iLogin {
+        margin-right: 1vw;
+    }
+}
+
+/*** FAQ PAGE ***/
+@media screen and (max-width: 500px) {
+    .intr-faq {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        text-align: left;
+        width: 100vw;
+        height: 90%;
+    }
+
+    span.back-in-faq::before {
+        content: "FAQ";
+        position: absolute;
+        font-size: 35vw;
+        font-weight: bold;
+        letter-spacing: 3vw;
+        font-family: 'ProductSans', sans-serif;
+        color: rgba(0, 0, 0, 0.01);
+        cursor: default;
+        top: 65%;
+        left: 0;
+        z-index: -1;
+    }
+
+    .faq-title {
+        font-size: 6.3vw;
+        font-weight: bold;
+        color: #222222;
+        font-family: 'ProductSans', sans-serif;
+        text-align: center;
+    }
+
+    .search {
+        margin-top: 2vh;
+    }
+
+    .search input[type=text] {
+        width: 80vw;
+        height: 6vh;
+        border: none;
+        border-bottom: 0.5vh solid #222222;
+        outline: none;
+        font-family: 'ProductSans', sans-serif;
+        font-size: 4.5vw;
+        padding-left: 5vw;
+        transition: 0.2s;
+    }
+    
+    .search input[type=text]:focus {
+        width: 80vw;
+        border-bottom: 0.5vh solid black;
+        padding-left: 0vw;
+    }
+}
+
+/*** 404 ERROR ***/
+@media screen and (max-width: 500px) {
+    span.back-in-404::before {
+        content: "404";
+        position: absolute;
+        font-size: 40vw;
+        font-weight: bold;
+        font-family: 'ProductSans', sans-serif;
+        top: 0;
+        left: 5vw;
+        color: rgba(0, 0, 0, 0.01);
+        cursor: default;
+        z-index: -1;
+    }
+
+    .retT {
+        top: 50vh;
+        font-size: 10vw;
+    }
+
+    .p-retT {
+        font-size: 5vw;
+    }
+}
+
+/*** SOCIAL / TOP***/
+@media screen and (max-width: 500px) {
+    .brnch-social {
+        display: none;
+    }
+    
+    #return-to-top {
+        display: none;
+    }
+}
+
+/*** FOOTER ***/
+@media screen and (max-width: 500px) {
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 6vh;
+        text-align: center;
+        background: white;
+    }
+    
+    footer a, span {
+        color: #999999;
+    }
+}
+
+/*** BACKIN ***/
+@media screen and (max-width: 500px) {
+    span.back-in-intro::before, span.back-in-ftr::before, span.back-in-register::before, span.back-in-login::before, span.back-in-profile::before {
+        display: none;
+    }
+}
+
+/*********************************************************/
+/*** SCROLLBAR ***/
+body::-webkit-scrollbar {
+    display: none;
+}

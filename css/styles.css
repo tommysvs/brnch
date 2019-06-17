@@ -1,0 +1,690 @@
+@font-face {
+    font-family: Suranna;
+    src: url("../fonts/ProductSans.ttf") format("truetype");
+}
+
+html, body {
+    background-color: #ffffff;
+    font-family: 'ProductSans', sans-serif;
+    min-height: 100vh;
+    color: black;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a, i {
+    text-decoration: none;
+}
+
+/*********************************************************/
+/*** NAVIGATION BAR ***/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12vh;
+    background-color: white;
+    font-family: 'ProductSans', sans-serif;
+}
+
+.logo {
+    color: black;
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+.logo:hover {
+    text-decoration: underline;
+}
+
+.navlinks {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.navlinks li {
+    list-style: none;
+} 
+
+.navlinks a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.9vh;
+    padding: 1vw 1.3vw;
+    border-radius: 5vw;
+    transition: all ease 0.3s;
+}
+
+.navlinks a:hover {
+    background: #f1f1f1;
+    border-radius: 5vw;
+    transition: all ease 0.5s;
+}
+
+.navlinks a:active {
+    background: #cccccc;
+}
+
+.bars {
+    display: none;
+    cursor: pointer;
+}
+
+.bars div {
+    width: 25px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 1);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/*********************************************************/
+/*** INTRO SECTION ***/
+.intro-section {
+    height: 88vh;
+    top: 12vh;
+    width: 100%;
+    background: #ffffff;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 88vh;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+span.back-in-intro::before {
+    content: "brnch";
+    position: absolute;
+    font-size: 20vw;
+    font-weight: bold;
+    letter-spacing: 5.5vh;
+    font-family: 'ProductSans', sans-serif;
+    color: rgba(0, 0, 0, 0.01);
+    cursor: default;
+    top: 50%;
+    left: 10%;
+    z-index: -1;
+}
+
+.intro {
+    text-align: center;
+    width: auto;
+}
+
+.intro h1 {
+    display: block;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: transparent;
+    font-family: 'ProductSans', sans-serif;
+    letter-spacing: 3px;
+    background: linear-gradient(120deg, mediumpurple, deepskyblue);
+    -webkit-background-clip: text;
+    overflow: hidden;
+    /*border-right: .15vw solid mediumpurple;
+    animation: blink-caret 1s step-end infinite;*/
+}
+
+.intro p {
+    margin-top: 0.5vh;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 1.1vw;
+    letter-spacing: 1px;
+}
+
+.regbtn {
+    margin-top: 5vh;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9vw;
+    background: mediumpurple;
+    width: 15vw;
+    height: 6vh;
+    border: none;
+    border-radius: 5vw;
+    font-family: 'ProductSans', sans-serif;
+    transition: all ease 0.2s;
+    outline: none;
+    cursor: pointer;
+}
+
+.regbtn:hover {
+    background: rgba(131, 90, 214, 1);
+    transition: all ease 0.2s;
+}
+
+span.back-in::before {
+    content: "brnch";
+    position: absolute;
+    font-size: 40vh;
+    font-weight: bold;
+    letter-spacing: 5.5vh;
+    font-family: 'ProductSans', sans-serif;
+    color: rgba(0, 0, 0, 0.01);
+    cursor: default;
+    top: 45%;
+    left: 25%;
+    z-index: -1;
+}
+
+
+/*********************************************************/
+/*** FEATURES SECTION ***/
+span.back-in-ftr::before {
+    content: "features";
+    position: absolute;
+    font-size: 14vw;
+    font-weight: bold;
+    letter-spacing: 5vh;
+    font-family: 'ProductSans', sans-serif;
+    color: rgba(0, 0, 0, 0.01);
+    cursor: default;
+    top: 60%;
+    left: 5%;
+    z-index: -1;
+}
+
+.intr-ftr {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.intr-ftr span {
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: #222222;
+    font-family: 'ProductSans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.intr-ftr p {
+    font-size: 1vw;
+    font-weight: bold;
+    color: #aaaaaa;
+    font-family: 'ProductSans', sans-serif;
+    letter-spacing: 0.08vw;
+    text-align: center;
+    margin: 2vh;
+}
+
+.grid-ftr {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: auto;
+}
+
+/*********************************************************/
+/*** PRICING PAGE ***/
+.intr-prc {
+    text-align: center;
+    width: auto;
+}
+
+span.back-in-pricing::before {
+    content: "pricing";
+    position: absolute;
+    font-size: 12vw;
+    font-weight: bold;
+    letter-spacing: 3vw;
+    font-family: 'ProductSans', sans-serif;
+    color: rgba(0, 0, 0, 0.01);
+    cursor: default;
+    top: 60%;
+    left: 14%;
+    z-index: -1;
+}
+
+.pricing-not-live {
+    font-size: 3.1vw;
+    font-weight: bold;
+    color: #aaaaaa;
+    font-family: 'ProductSans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.p-pricing-not-live {
+    font-size: 1.1vw;
+    font-weight: lighter;
+    color: #aaaaaa;
+    font-family: 'ProductSans', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+
+/*********************************************************/
+/*** REGLOG PAGE ***/
+span.back-in-register::before {
+    content: "sign up";
+    position: absolute;
+    font-size: 15vw;
+    font-weight: bold;
+    letter-spacing: 2vw;
+    font-family: 'ProductSans', sans-serif;
+    color: rgba(0, 0, 0, 0.01);
+    cursor: default;
+    top: 55%;
+    left: 15%;
+    z-index: -1;
+}
+
+span.back-in-login::before {
+    content: "log in";
+    position: absolute;
+    font-size: 15vw;
+    font-weight: bold;
+    letter-spacing: 2vw;
+    font-family: 'ProductSans', sans-serif;
+    color: rgba(0, 0, 0, 0.01);
+    cursor: default;
+    top: 55%;
+    left: 30%;
+    z-index: -1;
+}
+
+.title-reglog {
+    position: absolute;
+    top: 8vh;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.title-reglog span {
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: #aaaaaa;
+    font-family: 'ProductSans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.reglog-cont {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 1vw;
+    justify-items: center;
+}
+
+.reglog-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 22vw;
+    height: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.reglog {
+    text-align: center;
+}
+
+.reglog input[type=text], input[type=password], input[type=submit] {
+    margin-top: 30px;
+}
+
+.reglog input[type=text], input[type=password] {
+    border: 0;
+    width: 16vw;
+    height: 35px;
+    background: #f9f9f9;
+    border-bottom: 2px solid #666666;
+    outline: none;
+    transition: all ease 0.3s;
+    padding: 0.5vw;
+}
+
+.reglog input[type=text]:focus, input[type=password]:focus {
+    border: none;
+    height: 35px;
+    border-bottom: 2px solid black;
+    transition: all ease 0.3s;
+}
+
+.reglog input[type=text]:focus::placeholder, input[type=password]:focus::placeholder {
+    color: transparent;
+    transition: 0.3s;
+}
+
+#error_msg {
+    margin-top: 2vh;
+    width: 100%;
+    font-size: 0.9vw;
+    color: darkred;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reglog input[type=submit] {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: mediumpurple;
+    width: 15vw;
+    height: 5.4vh;
+    border: none;
+    font-family: 'ProductSans', sans-serif;
+    border-radius: 5vw;
+    transition: all ease 0.2s;
+    outline: none;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.reglog input[type=submit]:hover {
+    background: rgba(131, 90, 214, 1);
+    transition: all ease 0.2s;
+}
+
+.red-login {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8vw;
+    margin-bottom: 30px;
+}
+
+.red-login a {
+    color: mediumpurple;
+}
+
+.red-login a:hover {
+    text-decoration: underline;
+}
+
+.sep {
+    height: 0.1vh;
+    width: 90%;
+    background-color: #c1c1c1;
+}
+
+.social-login-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 10vh;
+    width: 25vw;
+}
+
+.login-insta {
+    height: 5vh;
+    width: 20vw;
+    background-color: #f1f1f1;
+    color: #a1a1a1;
+    font-size: 1vw;
+    border-radius: 5vw;
+    text-align: center;
+    line-height: 5vh;
+    cursor: pointer;
+}
+
+.iLogin {
+    margin-right: 0.5vw;
+}
+
+.login-insta:hover {
+    color: mediumpurple;
+}
+
+.login-insta:active {
+    background: #e9e9e9;
+}
+
+
+
+/*********************************************************/
+/*** FAQ PAGE ***/
+.intr-faq {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+    width: 100vw;
+    height: 90%;
+}
+
+span.back-in-faq::before {
+    content: "FAQ";
+    position: absolute;
+    font-size: 12vw;
+    font-weight: bold;
+    letter-spacing: 3vw;
+    font-family: 'ProductSans', sans-serif;
+    color: rgba(0, 0, 0, 0.01);
+    cursor: default;
+    top: 60%;
+    left: 50%;
+    z-index: -1;
+}
+
+.faq-title {
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: #222222;
+    font-family: 'ProductSans', sans-serif;
+    letter-spacing: 0.2vw;
+}
+
+.search {
+    margin-top: 3vh;
+}
+
+.search input[type=text] {
+    width: 30vw;
+    height: 6vh;
+    border: none;
+    border-bottom: 0.4vh solid #222222;
+    outline: none;    
+    font-family: 'ProductSans', sans-serif;
+    font-size: 1.4vw;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.search input[type=text]::placeholder {
+    color: #c1c1c1;
+}
+
+.search input[type=text]:focus {
+    padding-left: 2vw;
+    width: 50vw;
+    border-bottom: 0.2vw solid black;
+    cursor: text;
+}
+
+/*********************************************************/
+/*** PROFILE PAGE  ***/
+.profile-section { 
+    height: 90vh;
+    top: 10vh;
+    width: 100%;
+    background: white;
+}
+
+.container-profile {
+    display: flex;
+    justify-content: flex-start;
+    width: 80vw;
+    height: 90vvh;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.welcome_msg {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #aaaaaa;
+    font-family: 'ProductSans', sans-serif;
+    letter-spacing: 2px;
+}
+
+
+/*********************************************************/
+/*** 404 PAGE ***/
+span.back-in-404::before {
+    content: "404";
+    position: absolute;
+    font-size: 30vw;
+    font-weight: bold;
+    letter-spacing: 3vw;
+    font-family: 'ProductSans', sans-serif;
+    color: rgba(0, 0, 0, 0.01);
+    cursor: default;
+    top: 10%;
+    left: 15%;
+    z-index: -1;
+}
+
+.retT {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #aaaaaa;
+    font-family: 'ProductSans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.p-retT {
+    font-size: 1.1vw;
+    font-weight: lighter;
+    color: #aaaaaa;
+    font-family: 'ProductSans', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.error-return {
+    color: #888888;
+}
+
+.error-return:hover {
+    text-decoration: underline;
+}
+
+/*********************************************************/
+/*** BRNCH SOCIAL LINKS ***/
+.brnch-social {
+    position: fixed;
+    word-wrap: break-word;
+    bottom: 4vh;
+    left: 2vw;
+    z-index: 1;
+}
+
+.brnch-social ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.brnch-social li {
+    margin-top: 10px;
+}
+
+.brnch-social i {
+    display: inline-block;     
+    position: relative;  
+    font-size: 1.5vw;
+    color: #222222;
+    padding: 5px;
+    cursor: pointer;
+    transition: all ease 0.75s;
+}
+
+.brnch-social i:hover {
+    color: mediumpurple;
+    transition: all ease 0.75s;
+}
+
+
+/*********************************************************/
+/*** FOOTER ***/
+footer {
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    background: white;
+}
+
+footer a, span, p  {
+    color: #999999;
+    font-size: 0.7vw;
+    font-weight: lighter;
+    font-family: 'ProductSans', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/*********************************************************/
+/*** BUTTON-TO-TOP ***/
+#return-to-top {
+    position: fixed;
+    bottom: 4vh;
+    right: 1.8vw;
+    width: 3.3vw;
+    height: 7vh;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+#return-to-top i {
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+    position: relative;
+    left: 1vw;
+    top: 1.1vh;
+    font-size: 2vw;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#return-to-top:hover i {
+    color: rgba(0, 0, 0, 1);
+    top: 10px;
+}
+
+
+/*********************************************************/
+/*** SELECTION ***/
+::selection {
+      background: #dddddd;
+      color: black;
+}
+
+/*********************************************************/
+/*** SCROLLBAR ***/
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+}
